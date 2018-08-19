@@ -155,6 +155,7 @@ FileInputStream has constructor to accept File object or String as filepath, can
 
 InputStreamReader has constructor to accept inputStream or FileInputStream
 
+```
 BufferedReader br1 = new BufferedReader(new InputStreamReader(new FileInputStream(System.getProperty("user.dir") + "/readme.txt")));
-
+```
 
