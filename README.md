@@ -1,7 +1,7 @@
 Java Input Output Stream Examples explains how to read or write a file in JAVA
 =====
 
-***Read file***
+# Read from file
 
 1) Using FileReader and Buffer Reader (only for text files)
 2) Using FileInputStream, InputStreamReader, BufferReader (can be used for Image)
@@ -59,7 +59,7 @@ String s = new String(fileContent); // String class has a constructor which take
 System.out.println(s);
 ```
 
-***Write file**
+# Write to file
 
 Method 1:
 
@@ -71,8 +71,11 @@ BufferedWriter bw = new BufferedWriter(fw);
 Method 2:
 
 OutputStream
+
 FileOutputStream
+
 OutputStreamWriter
+
 BufferWriter
 
 ```
@@ -126,6 +129,28 @@ char[] charArray = s.toCharArray();
 ReadFile.readFileUsingFileReader();            
 ReadFile.readFileUsingInputStreamReader();     
 ReadFile.readFileAsBytesAndConvertBackToText();
-WriteFile.writeToFileUsingFileWriter();        
+
+WriteFile.writeToFileUsingFileWriter();    
 WriteFile.writeFileUsingOutputStreamWriter();  
 WriteFile.readTextasByteAndWriteToTextFile();  
+
+
+***************************************************
+
+**Streams***
+Streams are two types 
+1) InputStream ( Binary & Character)
+2) OutputStream
+
+FileInputStream Methods :
+
+public int available(): returns an estimate of the number of remaining bytes that can be read.
+public int read(): reads one byte of data, returns the byte as an integer value. Return -1 if the end of the file is reached.
+public int read(byte[]): reads a chunk of bytes to the specified byte array, up to the size of the array. This method returns -1 if there’s no more data or the end of the file is reached.
+public int read(byte[], int offset, int length): reads up to length bytes of data from the input stream. 
+
+FileInputStream fis = new FileInputStream(file) // FileInputStream has constructor to accept File object or String as filepath, does not have to accept inputStream.
+
+To inputStreamReader can accept inputStream or FileInputStream
+
+
