@@ -71,11 +71,8 @@ BufferedWriter bw = new BufferedWriter(fw);
 Method 2:
 
 OutputStream
-
 FileOutputStream
-
 OutputStreamWriter
-
 BufferWriter
 
 ```
@@ -138,6 +135,7 @@ WriteFile.readTextasByteAndWriteToTextFile();
 ***************************************************
 
 **Streams***
+
 Streams are two types 
 1) InputStream ( Binary & Character)
 2) OutputStream
@@ -149,8 +147,14 @@ public int read(): reads one byte of data, returns the byte as an integer value.
 public int read(byte[]): reads a chunk of bytes to the specified byte array, up to the size of the array. This method returns -1 if there’s no more data or the end of the file is reached.
 public int read(byte[], int offset, int length): reads up to length bytes of data from the input stream. 
 
-FileInputStream fis = new FileInputStream(file) // FileInputStream has constructor to accept File object or String as filepath, does not have to accept inputStream.
+```
+FileInputStream fis = new FileInputStream(file) 
+```
 
-To inputStreamReader can accept inputStream or FileInputStream
+FileInputStream has constructor to accept File object or String as filepath, can not accept inputStream.
+
+InputStreamReader has constructor to accept inputStream or FileInputStream
+
+BufferedReader br1 = new BufferedReader(new InputStreamReader(new FileInputStream(System.getProperty("user.dir") + "/readme.txt")));
 
 
